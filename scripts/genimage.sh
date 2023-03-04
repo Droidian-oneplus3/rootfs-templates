@@ -99,7 +99,7 @@ echo "Preparing zipfile"
 if [ ! -d "android-image-flashing-template" ]; then
     apt update
     apt install git -y
-    git clone https://github.com/droidian-lavender/android-image-flashing-template
+    git clone https://github.com/droidian-oneplus3/android-image-flashing-template
 fi
 echo ${WORK_DIR}
 echo ${ZIP_NAME}
@@ -113,14 +113,8 @@ mv ${WORK_DIR}/userdata.img ${WORK_DIR}/target/data/userdata.img
 
 apt update
 apt install wget -y
-wget https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/boot.img
-wget https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/dtbo.img
-wget https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/vbmeta.img
-wget https://github.com/droidian-lavender/kernel-xiaomi-lavender/releases/download/images/vendor.img
+wget https://github.com/Droidian-oneplus3/android_kernel_oneplus_msm8996/releases/download/boot/boot.img
 cp ./boot.img ${WORK_DIR}/target/data/boot.img
-cp ./dtbo.img ${WORK_DIR}/target/data/dtbo.img
-cp ./vbmeta.img ${WORK_DIR}/target/data/vbmeta.img
-cp ./vendor.img ${WORK_DIR}/target/data/vendor.img
 
 # generate zip
 echo "Generating zip"
