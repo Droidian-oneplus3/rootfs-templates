@@ -29,6 +29,12 @@ umount $IMG_MOUNTPOINT
 # generate flashable zip
 echo "Generating recovery flashable zip"
 mv rootfs.img android-recovery-flashing-template/data/rootfs.img
+
+apt update
+apt install wget -y
+wget https://github.com/Droidian-oneplus3/android_kernel_oneplus_msm8996/releases/download/boot/boot.img
+cp ./boot.img android-recovery-flashing-template/data/boot.img
+
 (cd android-recovery-flashing-template ; zip -r9 ../out/$ZIP_NAME * -x .git README.md *placeholder)
 
 echo "done."
