@@ -70,7 +70,7 @@ actions:
     chroot: true
     description: install adaptation
     packages:
-      - adaptation-droidian-oneplus
+      - adaptation-droidian-oneplus3
       - adaptation-oneplus3-configs
       - linux-image-3.18.120-oneplus-oneplus3
       - linux-headers-3.18.120-oneplus-oneplus3
