@@ -60,3 +60,17 @@ actions:
     description: Set up cutie
     chroot: true
     script: scripts/setup-cutie.sh
+
+  - action: run
+    chroot: true
+    description: add device repo
+    script: scripts/add-repo.sh
+
+  - action: apt
+    chroot: true
+    description: install adaptation
+    packages:
+      - adaptation-droidian-oneplus
+      - adaptation-oneplus3-configs
+      - linux-image-3.18.120-oneplus-oneplus3
+      - linux-headers-3.18.120-oneplus-oneplus3
