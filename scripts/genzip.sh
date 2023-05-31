@@ -24,7 +24,7 @@ sync
 
 apt update
 apt install wget -y
-wget https://github.com/Droidian-oneplus3/android_kernel_oneplus_msm8996/releases/download/boot/boot.img
+wget https://github.com/Droidian-oneplus3/android_kernel_oneplus_msm8996/releases/download/boot_img/boot.img
 cp ./boot.img $IMG_MOUNTPOINT/boot/boot.img
 
 # umount the image

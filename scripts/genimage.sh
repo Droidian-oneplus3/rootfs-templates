@@ -113,7 +113,7 @@ mv ${WORK_DIR}/userdata.img ${WORK_DIR}/target/data/userdata.img
 
 apt update
 apt install wget -y
-wget https://github.com/Droidian-oneplus3/android_kernel_oneplus_msm8996/releases/download/boot/boot.img
+wget https://github.com/Droidian-oneplus3/android_kernel_oneplus_msm8996/releases/download/boot_img/boot.img
 cp ./boot.img ${WORK_DIR}/target/data/boot.img
 
 # generate zip
